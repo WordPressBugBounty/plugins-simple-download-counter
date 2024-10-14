@@ -160,3 +160,13 @@ function simple_download_counter_callback_rate($args) {
 	echo '<a target="_blank" rel="noopener noreferrer" href="'. esc_url($href) .'" title="'. esc_attr($title) .'">'. esc_html($label) .'</a>';
 	
 }
+
+function simple_download_counter_callback_support($args) {
+	
+	$href  = 'https://monzillamedia.com/donate.html';
+	$title = esc_attr__('Donate via PayPal, credit card, or cryptocurrency', 'simple-download-counter');
+	$text  = isset($args['label']) ? $args['label'] : esc_html__('Show support with a small donation&nbsp;&raquo;', 'simple-download-counter');
+	
+	echo '<a target="_blank" rel="noopener noreferrer" href="'. $href .'" title="'. $title .'">'. $text .'</a>';
+	
+}

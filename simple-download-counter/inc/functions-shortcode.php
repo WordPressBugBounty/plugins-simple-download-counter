@@ -55,25 +55,29 @@ function simple_download_counter_downloads_published($atts) {
 }
 
 
-function simple_download_counter_count_total($atts) {
+function simple_download_counter_count_total($atts = array()) {
 	
-	$count = 0;
+	$posts = get_posts(array('post_type' => 'sdc_download', 'meta_key' => 'sdc_download_count', 'post_status' => 'publish', 'posts_per_page' => -1));
 	
-	$args = array('post_type' => 'sdc_download', 'posts_per_page' => -1, 'post_status' => 'publish');
+	$counts = [];
 	
-	$downloads = new WP_Query($args);
-	
-	while ($downloads->have_posts()) : 
+	if ($posts) {
 		
-		$downloads->the_post();
+		foreach ($posts as $post) {
+			
+			$count = get_post_meta($post->ID, 'sdc_download_count', true);
+			
+			$counts[] = is_numeric($count) ? $count : 0;
+			
+		}
 		
-		$download_count = (int) get_post_meta(get_the_ID(), 'sdc_download_count', true);
-		
-		$count += is_int($download_count) ? (int) $download_count : 0;
-		
-	endwhile;
+	}
 	
-	return number_format($count);
+	$total = array_sum($counts);
+	
+	$total = number_format($total, 0, '.', apply_filters('simple_download_counter_total_sep', ','));
+	
+	return $total;
 	
 }
 

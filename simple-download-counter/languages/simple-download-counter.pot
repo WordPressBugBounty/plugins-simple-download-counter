@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Download Counter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-21 22:30+0000\n"
+"POT-Creation-Date: 2024-10-14 20:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -60,8 +60,20 @@ msgstr ""
 msgid "Alphanumeric string for download URLs. Default value is recommended."
 msgstr ""
 
-#: inc/settings-reset.php:32
-msgid "Buy one get one FREE with code"
+#: inc/settings-reset.php:34
+msgid "and"
+msgstr ""
+
+#: inc/settings-reset.php:36
+msgid "Apply code"
+msgstr ""
+
+#: inc/settings-reset.php:36
+msgid "at checkout. Sale ends 12/21/24."
+msgstr ""
+
+#: inc/settings-reset.php:35
+msgid "books"
 msgstr ""
 
 #: inc/register-post-type.php:83 inc/register-post-type.php:93
@@ -118,12 +130,16 @@ msgstr ""
 msgid "Direct link to download file"
 msgstr ""
 
-#: inc/settings-reset.php:105
+#: inc/settings-reset.php:107
 msgid "Dismiss"
 msgstr ""
 
 #: inc/functions-admin.php:282
 msgid "docs"
+msgstr ""
+
+#: inc/settings-callbacks.php:167
+msgid "Donate via PayPal, credit card, or cryptocurrency"
 msgstr ""
 
 #: inc/register-post-type.php:11 inc/register-post-type.php:13 
@@ -217,11 +233,11 @@ msgid "Download Version:"
 msgstr ""
 
 #: inc/register-post-type.php:10 inc/register-post-type.php:12 
-#: inc/register-post-type.php:43 inc/functions-shortcode.php:307
+#: inc/register-post-type.php:43 inc/functions-shortcode.php:311
 msgid "Downloads"
 msgstr ""
 
-#: inc/functions-shortcode.php:92
+#: inc/functions-shortcode.php:96
 msgid "downloads"
 msgstr ""
 
@@ -265,6 +281,10 @@ msgstr ""
 msgid "Error: Invalid Download URL"
 msgstr ""
 
+#: inc/settings-reset.php:31
+msgid "Fall Sale!"
+msgstr ""
+
 #: inc/register-post-type.php:27
 msgid "Featured Image"
 msgstr ""
@@ -306,10 +326,6 @@ msgstr ""
 msgid "for using Simple Download Counter (SDC). Need help?"
 msgstr ""
 
-#: inc/settings-reset.php:34
-msgid "Get&nbsp;plugins&nbsp;&raquo;"
-msgstr ""
-
 #: inc/functions-core.php:138
 msgid "Go to homepage &raquo;"
 msgstr ""
@@ -336,12 +352,12 @@ msgstr ""
 msgid "Insert into Download"
 msgstr ""
 
-#: inc/functions-shortcode.php:24 inc/functions-shortcode.php:103 
-#: inc/functions-shortcode.php:313
+#: inc/functions-shortcode.php:24 inc/functions-shortcode.php:107 
+#: inc/functions-shortcode.php:317
 msgid "Invalid Download ID"
 msgstr ""
 
-#: inc/functions-shortcode.php:167
+#: inc/functions-shortcode.php:171
 msgid "Invalid Download Key"
 msgstr ""
 
@@ -401,10 +417,6 @@ msgstr ""
 msgid "or click button to upload new file."
 msgstr ""
 
-#: inc/settings-reset.php:33
-msgid "or take 30% off with code"
-msgstr ""
-
 #: inc/register-post-type.php:87
 msgid "Parent Category"
 msgstr ""
@@ -437,12 +449,16 @@ msgstr ""
 msgid "Popular Tags"
 msgstr ""
 
-#: inc/settings-reset.php:31
-msgid "Pro Plugin Sale!"
+#: inc/settings-reset.php:33
+msgid "Pro WordPress plugins"
 msgstr ""
 
 #: inc/settings-callbacks.php:14
 msgid "quick solution &raquo;"
+msgstr ""
+
+#: inc/settings-register.php:20
+msgid "Rate Plugin"
 msgstr ""
 
 #: simple-download-counter.php:173
@@ -506,12 +522,20 @@ msgstr ""
 msgid "Shortcode"
 msgstr ""
 
-#: inc/settings-register.php:20
+#: inc/settings-register.php:22
 msgid "Show Support"
 msgstr ""
 
 #: inc/settings-register.php:20
 msgid "Show support with a 5-star rating &raquo;"
+msgstr ""
+
+#: inc/settings-register.php:22
+msgid "Show support with a small donation &raquo;"
+msgstr ""
+
+#: inc/settings-callbacks.php:168
+msgid "Show support with a small donation&nbsp;&raquo;"
 msgstr ""
 
 #. Name of the plugin
@@ -529,6 +553,10 @@ msgstr ""
 
 #: inc/register-post-type.php:128 inc/register-post-type.php:141
 msgid "Tags"
+msgstr ""
+
+#: inc/settings-reset.php:32
+msgid "Take 25% OFF any of our"
 msgstr ""
 
 #: inc/settings-callbacks.php:8

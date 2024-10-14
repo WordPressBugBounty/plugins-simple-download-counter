@@ -17,7 +17,9 @@ function simple_download_counter_register_settings() {
 	
 	add_settings_field('reset_options', __('Reset Options', 'simple-download-counter'), 'simple_download_counter_callback_reset_options', 'download_counter_options', 'settings', array('id' => 'reset_options', 'section' => 'settings', 'label' => esc_html__('Restore default plugin options', 'simple-download-counter')));
 	
-	add_settings_field('rate_plugin',   __('Show Support',  'simple-download-counter'), 'simple_download_counter_callback_rate',          'download_counter_options', 'settings', array('id' => 'rate_plugin',   'section' => 'settings', 'label' => esc_html__('Show support with a 5-star rating &raquo;', 'simple-download-counter')));
+	add_settings_field('rate_plugin',   __('Rate Plugin',   'simple-download-counter'), 'simple_download_counter_callback_rate',          'download_counter_options', 'settings', array('id' => 'rate_plugin',   'section' => 'settings', 'label' => esc_html__('Show support with a 5-star rating &raquo;', 'simple-download-counter')));
+	
+	add_settings_field('show_support',  __('Show Support',  'simple-download-counter'), 'simple_download_counter_callback_support',       'download_counter_options', 'settings', array('id' => 'show_support',  'section' => 'settings', 'label' => esc_html__('Show support with a small donation &raquo;', 'simple-download-counter')));
 	
 	// add_settings_field('custom_fields', __('Custom Fields', 'simple-download-counter'), 'simple_download_counter_callback_checkbox',      'download_counter_options', 'settings', array('id' => 'custom_fields', 'section' => 'settings', 'label' => esc_html__('Display custom fields on Download posts. Default value is recommended.', 'simple-download-counter')));
 	

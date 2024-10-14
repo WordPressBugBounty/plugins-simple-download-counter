@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 1.9
-Version:    1.9
+Tested up to: 6.7
+Stable tag: 2.0
+Version:    2.0
 Requires PHP: 5.6.20
 Text Domain: simple-download-counter
 Domain Path: /languages
@@ -180,7 +180,7 @@ Using these shortcut variables, it's possible to configure your download counts 
 
 **Display total download count:** `[sdc_count_total]`
 
-This shortcode simply displays the total number of (published) downloads. 
+This shortcode displays the total number of times any/all published downloads have been downloaded. 
 
 	[sdc_count_total]
 
@@ -286,15 +286,13 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Simple Download Counter, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**1.9 (2024/06/21)**
+**2.0 (2024/10/10)**
 
-* Fixes bug with TinyMCE loading ([Thanks](https://wordpress.org/support/topic/conflict-with-givewp-backend-error-message/page/2/#post-17536445) [@garrettm30](https://wordpress.org/support/users/garrettm30/))
-* Fixes bug "Failed to initialize plugin" ([Thanks](https://wordpress.org/support/topic/failed-to-initialize-plugin-sdc_download-2/) [@qriouslad](https://wordpress.org/support/users/qriouslad/))
-* Fixes bug with `dismiss_notice_link`
-* "Add Download" Quicktag now included on all post types
+* Improves function `simple_download_counter_count_total`
+* Adds filter hook `simple_download_counter_total_sep`
 * Updates plugin settings page
 * Updates default translation template
-* Tests on WordPress 6.6 (beta)
+* Tests on WordPress 6.7 (beta)
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/simple-download-counter.txt](https://plugin-planet.com/wp/changelog/simple-download-counter.txt)

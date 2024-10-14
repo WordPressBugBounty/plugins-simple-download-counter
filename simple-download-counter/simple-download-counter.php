@@ -9,9 +9,9 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 5.0
-	Tested up to: 6.6
-	Stable tag: 1.9
-	Version:    1.9
+	Tested up to: 6.7
+	Stable tag: 2.0
+	Version:    2.0
 	Requires PHP: 5.6.20
 	Text Domain: simple-download-counter
 	Domain Path: /languages
@@ -106,9 +106,9 @@ if (!class_exists('Simple_Download_Counter')) {
 		
 		function constants() {
 			
-			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '1.9');
+			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.0');
 			if (!defined('DOWNLOAD_COUNTER_REQUIRE')) define('DOWNLOAD_COUNTER_REQUIRE', '5.0');
-			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.6');
+			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.7');
 			if (!defined('DOWNLOAD_COUNTER_AUTHOR'))  define('DOWNLOAD_COUNTER_AUTHOR',  'Jeff Starr');
 			if (!defined('DOWNLOAD_COUNTER_NAME'))    define('DOWNLOAD_COUNTER_NAME',    __('Simple Download Counter', 'simple-download-counter'));
 			if (!defined('DOWNLOAD_COUNTER_HOME'))    define('DOWNLOAD_COUNTER_HOME',    esc_url('https://perishablepress.com/simple-download-counter/'));
