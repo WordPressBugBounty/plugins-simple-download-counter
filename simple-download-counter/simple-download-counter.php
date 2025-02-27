@@ -10,8 +10,8 @@
 	Contributors: specialk
 	Requires at least: 5.0
 	Tested up to: 6.7
-	Stable tag: 2.0
-	Version:    2.0
+	Stable tag: 2.1
+	Version:    2.1
 	Requires PHP: 5.6.20
 	Text Domain: simple-download-counter
 	Domain Path: /languages
@@ -53,7 +53,6 @@ if (!class_exists('Simple_Download_Counter')) {
 			add_action('init', 'simple_download_counter_updated_option_flush');
 			
 			add_action('admin_init',          array($this, 'check_version'));
-			add_action('plugins_loaded',      array($this, 'load_i18n'));
 			add_filter('plugin_action_links', array($this, 'action_links'), 10, 2);
 			add_filter('plugin_row_meta',     array($this, 'plugin_links'), 10, 2);
 			add_filter('admin_footer_text',   array($this, 'footer_text'),  10, 1);
@@ -106,11 +105,11 @@ if (!class_exists('Simple_Download_Counter')) {
 		
 		function constants() {
 			
-			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.0');
+			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.1');
 			if (!defined('DOWNLOAD_COUNTER_REQUIRE')) define('DOWNLOAD_COUNTER_REQUIRE', '5.0');
 			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.7');
 			if (!defined('DOWNLOAD_COUNTER_AUTHOR'))  define('DOWNLOAD_COUNTER_AUTHOR',  'Jeff Starr');
-			if (!defined('DOWNLOAD_COUNTER_NAME'))    define('DOWNLOAD_COUNTER_NAME',    __('Simple Download Counter', 'simple-download-counter'));
+			if (!defined('DOWNLOAD_COUNTER_NAME'))    define('DOWNLOAD_COUNTER_NAME',    'Simple Download Counter');
 			if (!defined('DOWNLOAD_COUNTER_HOME'))    define('DOWNLOAD_COUNTER_HOME',    esc_url('https://perishablepress.com/simple-download-counter/'));
 			if (!defined('DOWNLOAD_COUNTER_URL'))     define('DOWNLOAD_COUNTER_URL',     plugin_dir_url(__FILE__));
 			if (!defined('DOWNLOAD_COUNTER_DIR'))     define('DOWNLOAD_COUNTER_DIR',     plugin_dir_path(__FILE__));
@@ -220,42 +219,6 @@ if (!class_exists('Simple_Download_Counter')) {
 						wp_die($msg);
 						
 					}
-					
-				}
-				
-			}
-			
-		}
-		
-		function load_i18n() {
-			
-			$domain = 'simple-download-counter';
-			
-			$locale = apply_filters('download_counter_locale', get_locale(), $domain);
-			
-			$dir    = trailingslashit(WP_LANG_DIR);
-			
-			$file   = $domain .'-'. $locale .'.mo';
-			
-			$path_1 = $dir . $file;
-			
-			$path_2 = $dir . $domain .'/'. $file;
-			
-			$path_3 = $dir .'plugins/'. $file;
-			
-			$path_4 = $dir .'plugins/'. $domain .'/'. $file;
-			
-			$paths = array($path_1, $path_2, $path_3, $path_4);
-			
-			foreach ($paths as $path) {
-				
-				if ($loaded = load_textdomain($domain, $path)) {
-					
-					return $loaded;
-					
-				} else {
-					
-					return load_plugin_textdomain($domain, false, dirname(DOWNLOAD_COUNTER_FILE) .'/languages/');
 					
 				}
 				

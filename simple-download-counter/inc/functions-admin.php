@@ -248,6 +248,7 @@ function simple_download_counter_add_meta_box() {
 	// add_meta_box($id, $title, $callback, $screen, $context, $priority, $callback_args)
 	
 	add_meta_box('simple-download-counter',         __('Download',         'simple-download-counter'), 'simple_download_counter_meta_box',         'sdc_download', 'side',   'high');
+	add_meta_box('simple-download-counter-note',    __('Important',        'simple-download-counter'), 'simple_download_counter_meta_box_note',    'sdc_download', 'normal', 'core');
 	add_meta_box('simple-download-counter-url',     __('Download URL',     'simple-download-counter'), 'simple_download_counter_meta_box_url',     'sdc_download', 'normal', 'core');
 	add_meta_box('simple-download-counter-count',   __('Download Count',   'simple-download-counter'), 'simple_download_counter_meta_box_count',   'sdc_download', 'normal', 'core');
 	add_meta_box('simple-download-counter-version', __('Download Version', 'simple-download-counter'), 'simple_download_counter_meta_box_version', 'sdc_download', 'normal', 'core');
@@ -288,6 +289,28 @@ function simple_download_counter_meta_box() {
 	<?php
 	
 }
+
+
+function simple_download_counter_meta_box_note() {
+	
+	echo '<div class="simple-download-counter-note-wrap">';
+	
+	echo esc_html__('Please use caution when specifying download URLs. While it is possible to define URLs that are outside of the WordPress directory, it is not recommended. ', 'simple-download-counter');
+	echo esc_html__('Best practice for adding new download files:', 'simple-download-counter');
+	
+	echo '<ol>';
+	echo '<li>'. esc_html__('Visit the Media Library', 'simple-download-counter') .'</li>';
+	echo '<li>'. esc_html__('Upload your file', 'simple-download-counter') .'</li>';
+	echo '<li>'. esc_html__('Copy the file URL', 'simple-download-counter') .'</li>';
+	echo '<li>'. esc_html__('Paste the URL into the &ldquo;Download URL&rdquo; setting below', 'simple-download-counter') .'</li>';
+	echo '</ol>';
+	
+	echo '<strong>'. esc_html__('Note:', 'simple-download-counter') .'</strong> '. esc_html__('Files added to the Media Library are located at', 'simple-download-counter') . ' <code>/wp-content/uploads/</code>';
+	
+	echo '</div>';
+	
+}
+
 
 
 function simple_download_counter_meta_box_url() {

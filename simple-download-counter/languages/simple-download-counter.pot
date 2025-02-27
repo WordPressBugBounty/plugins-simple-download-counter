@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Download Counter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-14 20:23+0000\n"
+"POT-Creation-Date: 2025-02-27 16:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Loco-Version: 2.6.2; wp-6.1-beta2-54351\n"
 "X-Domain: simple-download-counter"
 
-#: inc/functions-admin.php:306
+#: inc/functions-admin.php:329
 msgid " file"
 msgstr ""
 
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Add New"
 msgstr ""
 
-#: inc/register-post-type.php:91
+#: inc/register-post-type.php:111
 msgid "Add New Category"
 msgstr ""
 
@@ -36,15 +36,15 @@ msgstr ""
 msgid "Add New Download"
 msgstr ""
 
-#: inc/register-post-type.php:135
+#: inc/register-post-type.php:163
 msgid "Add New Tag"
 msgstr ""
 
-#: inc/register-post-type.php:138
+#: inc/register-post-type.php:166
 msgid "Add or remove tags"
 msgstr ""
 
-#: inc/register-post-type.php:86 inc/functions-admin.php:140
+#: inc/register-post-type.php:106 inc/functions-admin.php:140
 msgid "All Categories"
 msgstr ""
 
@@ -52,7 +52,7 @@ msgstr ""
 msgid "All Downloads"
 msgstr ""
 
-#: inc/register-post-type.php:132
+#: inc/register-post-type.php:160
 msgid "All Tags"
 msgstr ""
 
@@ -72,19 +72,23 @@ msgstr ""
 msgid "at checkout. Sale ends 12/21/24."
 msgstr ""
 
+#: inc/functions-admin.php:299
+msgid "Best practice for adding new download files:"
+msgstr ""
+
 #: inc/settings-reset.php:35
 msgid "books"
 msgstr ""
 
-#: inc/register-post-type.php:83 inc/register-post-type.php:93
+#: inc/register-post-type.php:103 inc/register-post-type.php:113
 msgid "Categories"
 msgstr ""
 
-#: inc/register-post-type.php:84
+#: inc/register-post-type.php:104
 msgid "Category"
 msgstr ""
 
-#: inc/register-post-type.php:139
+#: inc/register-post-type.php:167
 msgid "Choose from the most used tags"
 msgstr ""
 
@@ -108,6 +112,10 @@ msgstr ""
 msgid "Copy Shortcode"
 msgstr ""
 
+#: inc/functions-admin.php:304
+msgid "Copy the file URL"
+msgstr ""
+
 #: inc/functions-admin.php:25
 msgid "Count"
 msgstr ""
@@ -118,7 +126,7 @@ msgid ""
 "using shortcodes."
 msgstr ""
 
-#: inc/register-post-type.php:114
+#: inc/register-post-type.php:134
 msgid "Default Download Category"
 msgstr ""
 
@@ -126,7 +134,7 @@ msgstr ""
 msgid "Default options restored."
 msgstr ""
 
-#: inc/functions-admin.php:273
+#: inc/functions-admin.php:274
 msgid "Direct link to download file"
 msgstr ""
 
@@ -134,7 +142,7 @@ msgstr ""
 msgid "Dismiss"
 msgstr ""
 
-#: inc/functions-admin.php:282
+#: inc/functions-admin.php:283
 msgid "docs"
 msgstr ""
 
@@ -151,20 +159,20 @@ msgstr ""
 msgid "Download Archives"
 msgstr ""
 
-#: inc/register-post-type.php:100
+#: inc/register-post-type.php:120
 msgid "Download Categories"
 msgstr ""
 
-#: inc/functions-admin.php:252
+#: inc/functions-admin.php:253
 msgid "Download Count"
 msgstr ""
 
-#: inc/functions-admin.php:276
+#: inc/functions-admin.php:277
 msgid "Download Count:"
 msgstr ""
 
-#: inc/functions-core.php:248 inc/functions-admin.php:473 
-#: inc/functions-admin.php:479
+#: inc/functions-core.php:248 inc/functions-admin.php:496 
+#: inc/functions-admin.php:502
 msgid "Download Error"
 msgstr ""
 
@@ -176,7 +184,7 @@ msgstr ""
 msgid "Download ID is undefined."
 msgstr ""
 
-#: inc/functions-admin.php:275
+#: inc/functions-admin.php:276
 msgid "Download ID:"
 msgstr ""
 
@@ -200,15 +208,15 @@ msgstr ""
 msgid "Download list navigation"
 msgstr ""
 
-#: inc/functions-admin.php:254
+#: inc/functions-admin.php:255
 msgid "Download Notes"
 msgstr ""
 
-#: inc/functions-admin.php:395
+#: inc/functions-admin.php:418
 msgid "Download notes.."
 msgstr ""
 
-#: inc/register-post-type.php:150
+#: inc/register-post-type.php:178
 msgid "Download Tags"
 msgstr ""
 
@@ -216,19 +224,19 @@ msgstr ""
 msgid "Download Title"
 msgstr ""
 
-#: inc/functions-admin.php:251 inc/functions-admin.php:320
+#: inc/functions-admin.php:252 inc/functions-admin.php:343
 msgid "Download URL"
 msgstr ""
 
-#: inc/functions-admin.php:253
+#: inc/functions-admin.php:254
 msgid "Download Version"
 msgstr ""
 
-#: inc/functions-admin.php:372
+#: inc/functions-admin.php:395
 msgid "Download version"
 msgstr ""
 
-#: inc/functions-admin.php:277
+#: inc/functions-admin.php:278
 msgid "Download Version:"
 msgstr ""
 
@@ -245,7 +253,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/register-post-type.php:89
+#: inc/register-post-type.php:109
 msgid "Edit Category"
 msgstr ""
 
@@ -253,23 +261,23 @@ msgstr ""
 msgid "Edit Download"
 msgstr ""
 
-#: inc/register-post-type.php:133
+#: inc/register-post-type.php:161
 msgid "Edit Tag"
 msgstr ""
 
-#: inc/functions-admin.php:393
+#: inc/functions-admin.php:416
 msgid "Enter any notes about this download (all kept private)."
 msgstr ""
 
-#: inc/functions-admin.php:347
+#: inc/functions-admin.php:370
 msgid "Enter download count."
 msgstr ""
 
-#: inc/functions-admin.php:370
+#: inc/functions-admin.php:393
 msgid "Enter download version."
 msgstr ""
 
-#: inc/functions-admin.php:314
+#: inc/functions-admin.php:337
 msgid "Enter existing file"
 msgstr ""
 
@@ -277,7 +285,7 @@ msgstr ""
 msgid "Error: allow_url_fopen not enabled."
 msgstr ""
 
-#: inc/functions-admin.php:473
+#: inc/functions-admin.php:496
 msgid "Error: Invalid Download URL"
 msgstr ""
 
@@ -289,12 +297,12 @@ msgstr ""
 msgid "Featured Image"
 msgstr ""
 
-#: inc/functions-admin.php:636 inc/functions-admin.php:649 
-#: inc/functions-admin.php:660
+#: inc/functions-admin.php:659 inc/functions-admin.php:672 
+#: inc/functions-admin.php:683
 msgid "File does not exist. Error code: "
 msgstr ""
 
-#: inc/functions-admin.php:612
+#: inc/functions-admin.php:635
 msgid "File does not exist. Error code: 10"
 msgstr ""
 
@@ -314,11 +322,15 @@ msgstr ""
 msgid "File URL is not defined."
 msgstr ""
 
+#: inc/functions-admin.php:308
+msgid "Files added to the Media Library are located at"
+msgstr ""
+
 #: inc/register-post-type.php:34
 msgid "Filter Download list"
 msgstr ""
 
-#: inc/functions-admin.php:283
+#: inc/functions-admin.php:284
 msgid "for shortcode options"
 msgstr ""
 
@@ -348,6 +360,10 @@ msgstr ""
 msgid "If you&rsquo;re getting 404 errors when trying to download, here is a"
 msgstr ""
 
+#: inc/functions-admin.php:251
+msgid "Important"
+msgstr ""
+
 #: inc/register-post-type.php:32
 msgid "Insert into Download"
 msgstr ""
@@ -369,7 +385,7 @@ msgstr ""
 msgid "Like this plugin? Give it a"
 msgstr ""
 
-#: inc/functions-admin.php:483
+#: inc/functions-admin.php:506
 msgid "local"
 msgstr ""
 
@@ -377,7 +393,7 @@ msgstr ""
 msgid "Location"
 msgstr ""
 
-#: inc/register-post-type.php:92
+#: inc/register-post-type.php:112
 msgid "New Category Name"
 msgstr ""
 
@@ -385,7 +401,7 @@ msgstr ""
 msgid "New Download"
 msgstr ""
 
-#: inc/register-post-type.php:136
+#: inc/register-post-type.php:164
 msgid "New Tag Name"
 msgstr ""
 
@@ -401,7 +417,7 @@ msgstr ""
 msgid "No Downloads found."
 msgstr ""
 
-#: inc/register-post-type.php:140
+#: inc/register-post-type.php:168
 msgid "No tags found."
 msgstr ""
 
@@ -409,19 +425,19 @@ msgstr ""
 msgid "No, abort mission."
 msgstr ""
 
-#: inc/settings-callbacks.php:12
+#: inc/settings-callbacks.php:12 inc/functions-admin.php:308
 msgid "Note:"
 msgstr ""
 
-#: inc/functions-admin.php:316
+#: inc/functions-admin.php:339
 msgid "or click button to upload new file."
 msgstr ""
 
-#: inc/register-post-type.php:87
+#: inc/register-post-type.php:107
 msgid "Parent Category"
 msgstr ""
 
-#: inc/register-post-type.php:88
+#: inc/register-post-type.php:108
 msgid "Parent Category:"
 msgstr ""
 
@@ -433,7 +449,11 @@ msgstr ""
 msgid "Parent Downloads:"
 msgstr ""
 
-#: inc/functions-admin.php:22 inc/functions-admin.php:273
+#: inc/functions-admin.php:305
+msgid "Paste the URL into the &ldquo;Download URL&rdquo; setting below"
+msgstr ""
+
+#: inc/functions-admin.php:22 inc/functions-admin.php:274
 msgid "Permalink"
 msgstr ""
 
@@ -441,11 +461,18 @@ msgstr ""
 msgid "Please return to the"
 msgstr ""
 
+#: inc/functions-admin.php:298
+msgid ""
+"Please use caution when specifying download URLs. While it is possible to "
+"define URLs that are outside of the WordPress directory, it is not "
+"recommended. "
+msgstr ""
+
 #: inc/settings-register.php:14
 msgid "Plugin Settings"
 msgstr ""
 
-#: inc/register-post-type.php:131
+#: inc/register-post-type.php:159
 msgid "Popular Tags"
 msgstr ""
 
@@ -465,7 +492,7 @@ msgstr ""
 msgid "Rate this plugin"
 msgstr ""
 
-#: inc/functions-admin.php:483
+#: inc/functions-admin.php:506
 msgid "remote"
 msgstr ""
 
@@ -493,7 +520,7 @@ msgstr ""
 msgid "Return to previous page &#10550;"
 msgstr ""
 
-#: inc/register-post-type.php:85
+#: inc/register-post-type.php:105
 msgid "Search Categories"
 msgstr ""
 
@@ -501,11 +528,11 @@ msgstr ""
 msgid "Search Downloads"
 msgstr ""
 
-#: inc/register-post-type.php:130
+#: inc/register-post-type.php:158
 msgid "Search Tags"
 msgstr ""
 
-#: inc/register-post-type.php:137
+#: inc/register-post-type.php:165
 msgid "Separate tags with commas"
 msgstr ""
 
@@ -547,11 +574,11 @@ msgstr ""
 msgid "Sorry, pal!"
 msgstr ""
 
-#: inc/register-post-type.php:129
+#: inc/register-post-type.php:157
 msgid "Tag"
 msgstr ""
 
-#: inc/register-post-type.php:128 inc/register-post-type.php:141
+#: inc/register-post-type.php:156 inc/register-post-type.php:169
 msgid "Tags"
 msgstr ""
 
@@ -567,31 +594,35 @@ msgstr ""
 msgid "to upgrade WordPress and try again."
 msgstr ""
 
-#: inc/register-post-type.php:114
+#: inc/register-post-type.php:134
 msgid "Uncategorized"
 msgstr ""
 
-#: inc/functions-admin.php:315
+#: inc/functions-admin.php:338
 msgid "Uniform Resource Locator"
 msgstr ""
 
-#: inc/register-post-type.php:90
+#: inc/register-post-type.php:110
 msgid "Update Category"
 msgstr ""
 
-#: inc/register-post-type.php:134
+#: inc/register-post-type.php:162
 msgid "Update Tag"
 msgstr ""
 
-#: inc/functions-admin.php:324
+#: inc/functions-admin.php:347
 msgid "Upload File"
+msgstr ""
+
+#: inc/functions-admin.php:303
+msgid "Upload your file"
 msgstr ""
 
 #: inc/register-post-type.php:33
 msgid "Uploaded to this Download"
 msgstr ""
 
-#: inc/functions-admin.php:315
+#: inc/functions-admin.php:338
 msgid "URL"
 msgstr ""
 
@@ -607,8 +638,12 @@ msgstr ""
 msgid "View Download"
 msgstr ""
 
-#: inc/functions-admin.php:281
+#: inc/functions-admin.php:282
 msgid "Visit the"
+msgstr ""
+
+#: inc/functions-admin.php:302
+msgid "Visit the Media Library"
 msgstr ""
 
 #: inc/settings-callbacks.php:10

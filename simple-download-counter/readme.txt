@@ -10,8 +10,8 @@ Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 2.0
-Version:    2.0
+Stable tag: 2.1
+Version:    2.1
 Requires PHP: 5.6.20
 Text Domain: simple-download-counter
 Domain Path: /languages
@@ -284,6 +284,16 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 == Changelog ==
 
 If you like Simple Download Counter, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
+
+
+**2.1 (2025/02/27)**
+
+* Limits access to "Add New Download" to admin-level users
+* Adds important message on "Add New Download" screen
+* Fixes bug with translation textdomain loading
+* Removes deprecated `load_i18n()` function
+* Updates default translation template
+* Tests on WordPress 6.7
 
 
 **2.0 (2024/10/10)**

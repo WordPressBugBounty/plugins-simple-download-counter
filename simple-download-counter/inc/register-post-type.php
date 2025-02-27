@@ -63,6 +63,26 @@ function simple_download_counter_post_type() {
 		'can_export'           => true,
 		'delete_with_user'     => false,
 		
+		'capabilities'         => array(
+			
+			'edit_post'          => 'manage_options',
+			'read_post'          => 'manage_options',
+			'delete_post'        => 'manage_options',	
+			'edit_posts'         => 'manage_options',
+			'edit_others_posts'  => 'manage_options',
+			'delete_posts'       => 'manage_options',
+			'publish_posts'      => 'manage_options',
+			'read_private_posts' => 'manage_options',
+			
+	   		 'read'                   => 'manage_options',
+	   		 'delete_private_posts'   => 'manage_options',
+	   		 'delete_published_posts' => 'manage_options',
+	   		 'delete_others_posts'    => 'manage_options',
+	   		 'edit_private_posts'     => 'manage_options',
+	   		 'edit_published_posts'   => 'manage_options',
+	   		 
+	   	),
+		
 	);
 	
 	$options = simple_download_counter_options();
@@ -114,6 +134,14 @@ function simple_download_counter_custom_category() {
 		'default_term'       => array('name' => __('Uncategorized', 'simple-download-counter'), 'slug' => 'uncategorized', 'description' => __('Default Download Category', 'simple-download-counter')),
 		'sort'               => null,
 		
+		'capabilities'      => array(
+			
+			'manage_terms'  => 'manage_options',
+			'edit_terms'    => 'manage_options',
+			'delete_terms'  => 'manage_options',
+			'assign_terms'  => 'manage_options',
+		),
+		
 	);
 	
 	register_taxonomy('sdc_download_category', 'sdc_download', $args);
@@ -163,6 +191,14 @@ function simple_download_counter_custom_tag() {
 		'query_var'          => true,
 		'default_term'       => null,
 		'sort'               => null,
+		
+		'capabilities'      => array(
+			
+			'manage_terms'  => 'manage_options',
+			'edit_terms'    => 'manage_options',
+			'delete_terms'  => 'manage_options',
+			'assign_terms'  => 'manage_options',
+		),
 		
 	);
 	
