@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Download Counter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 16:09+0000\n"
+"POT-Creation-Date: 2025-03-22 14:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid " file"
 msgstr ""
 
-#: simple-download-counter.php:216
+#: simple-download-counter.php:215
 msgid " or higher, and has been deactivated! "
 msgstr ""
 
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Add or remove tags"
 msgstr ""
 
-#: inc/register-post-type.php:106 inc/functions-admin.php:140
+#: inc/functions-admin.php:140 inc/register-post-type.php:106
 msgid "All Categories"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgid "Apply code"
 msgstr ""
 
 #: inc/settings-reset.php:36
-msgid "at checkout. Sale ends 12/21/24."
+msgid "at checkout. Sale ends 6/25/2025."
 msgstr ""
 
 #: inc/functions-admin.php:299
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Choose from the most used tags"
 msgstr ""
 
-#: simple-download-counter.php:172
+#: simple-download-counter.php:171
 msgid "Click here to rate and review this plugin on WordPress.org"
 msgstr ""
 
@@ -150,8 +150,8 @@ msgstr ""
 msgid "Donate via PayPal, credit card, or cryptocurrency"
 msgstr ""
 
-#: inc/register-post-type.php:11 inc/register-post-type.php:13 
-#: inc/functions-admin.php:250
+#: inc/functions-admin.php:250 inc/register-post-type.php:11 
+#: inc/register-post-type.php:13
 msgid "Download"
 msgstr ""
 
@@ -171,8 +171,8 @@ msgstr ""
 msgid "Download Count:"
 msgstr ""
 
-#: inc/functions-core.php:248 inc/functions-admin.php:496 
-#: inc/functions-admin.php:502
+#: inc/functions-admin.php:496 inc/functions-admin.php:502 
+#: inc/functions-core.php:248
 msgid "Download Error"
 msgstr ""
 
@@ -240,8 +240,8 @@ msgstr ""
 msgid "Download Version:"
 msgstr ""
 
-#: inc/register-post-type.php:10 inc/register-post-type.php:12 
-#: inc/register-post-type.php:43 inc/functions-shortcode.php:311
+#: inc/functions-shortcode.php:311 inc/register-post-type.php:10 
+#: inc/register-post-type.php:12 inc/register-post-type.php:43
 msgid "Downloads"
 msgstr ""
 
@@ -287,10 +287,6 @@ msgstr ""
 
 #: inc/functions-admin.php:496
 msgid "Error: Invalid Download URL"
-msgstr ""
-
-#: inc/settings-reset.php:31
-msgid "Fall Sale!"
 msgstr ""
 
 #: inc/register-post-type.php:27
@@ -381,7 +377,7 @@ msgstr ""
 msgid "Jeff Starr"
 msgstr ""
 
-#: simple-download-counter.php:191
+#: simple-download-counter.php:190
 msgid "Like this plugin? Give it a"
 msgstr ""
 
@@ -425,7 +421,7 @@ msgstr ""
 msgid "No, abort mission."
 msgstr ""
 
-#: inc/settings-callbacks.php:12 inc/functions-admin.php:308
+#: inc/functions-admin.php:308 inc/settings-callbacks.php:12
 msgid "Note:"
 msgstr ""
 
@@ -457,7 +453,7 @@ msgstr ""
 msgid "Permalink"
 msgstr ""
 
-#: simple-download-counter.php:217
+#: simple-download-counter.php:216
 msgid "Please return to the"
 msgstr ""
 
@@ -488,7 +484,7 @@ msgstr ""
 msgid "Rate Plugin"
 msgstr ""
 
-#: simple-download-counter.php:173
+#: simple-download-counter.php:172
 msgid "Rate this plugin"
 msgstr ""
 
@@ -500,7 +496,7 @@ msgstr ""
 msgid "Remove Featured Image"
 msgstr ""
 
-#: simple-download-counter.php:215
+#: simple-download-counter.php:214
 msgid "requires WordPress "
 msgstr ""
 
@@ -512,7 +508,7 @@ msgstr ""
 msgid "Restore default options?"
 msgstr ""
 
-#: inc/settings-register.php:18 inc/settings-callbacks.php:145
+#: inc/settings-callbacks.php:145 inc/settings-register.php:18
 msgid "Restore default plugin options"
 msgstr ""
 
@@ -540,7 +536,7 @@ msgstr ""
 msgid "Set Featured Image"
 msgstr ""
 
-#: simple-download-counter.php:157 inc/settings-display.php:13 
+#: simple-download-counter.php:156 inc/settings-display.php:13 
 #: inc/settings-display.php:14
 msgid "Settings"
 msgstr ""
@@ -566,12 +562,15 @@ msgid "Show support with a small donation&nbsp;&raquo;"
 msgstr ""
 
 #. Name of the plugin
-#: simple-download-counter.php:113
 msgid "Simple Download Counter"
 msgstr ""
 
-#: simple-download-counter.php:268 simple-download-counter.php:274
+#: simple-download-counter.php:231 simple-download-counter.php:237
 msgid "Sorry, pal!"
+msgstr ""
+
+#: inc/settings-reset.php:31
+msgid "Spring Sale!"
 msgstr ""
 
 #: inc/register-post-type.php:157
@@ -583,14 +582,14 @@ msgid "Tags"
 msgstr ""
 
 #: inc/settings-reset.php:32
-msgid "Take 25% OFF any of our"
+msgid "Take 30% OFF any of our"
 msgstr ""
 
 #: inc/settings-callbacks.php:8
 msgid "Thanks"
 msgstr ""
 
-#: simple-download-counter.php:218
+#: simple-download-counter.php:217
 msgid "to upgrade WordPress and try again."
 msgstr ""
 
@@ -650,7 +649,7 @@ msgstr ""
 msgid "Visit the plugin docs &raquo;"
 msgstr ""
 
-#: simple-download-counter.php:218
+#: simple-download-counter.php:217
 msgid "WP Admin Area"
 msgstr ""
 
@@ -658,6 +657,6 @@ msgstr ""
 msgid "Yes, make it so."
 msgstr ""
 
-#: simple-download-counter.php:195
+#: simple-download-counter.php:194
 msgid "★★★★★ rating&nbsp;&raquo;"
 msgstr ""

@@ -26,14 +26,14 @@ function simple_download_counter_admin_notices() {
 			
 			?>
 			
-			<div class="notice notice-success notice-margin">
+			<div class="notice notice-success notice-margin notice-custom">
 				<p>
-					<strong><?php esc_html_e('Fall Sale!', 'simple-download-counter'); ?></strong> 
-					<?php esc_html_e('Take 25% OFF any of our', 'simple-download-counter'); ?> 
+					<strong><?php esc_html_e('Spring Sale!', 'simple-download-counter'); ?></strong> 
+					<?php esc_html_e('Take 30% OFF any of our', 'simple-download-counter'); ?> 
 					<a target="_blank" rel="noopener noreferrer" href="https://plugin-planet.com/"><?php esc_html_e('Pro WordPress plugins', 'simple-download-counter'); ?></a> 
 					<?php esc_html_e('and', 'simple-download-counter'); ?> 
 					<a target="_blank" rel="noopener noreferrer" href="https://books.perishablepress.com/"><?php esc_html_e('books', 'simple-download-counter'); ?></a>. 
-					<?php esc_html_e('Apply code', 'simple-download-counter'); ?> <code>FALL2024</code> <?php esc_html_e('at checkout. Sale ends 12/21/24.', 'simple-download-counter'); ?> 
+					<?php esc_html_e('Apply code', 'simple-download-counter'); ?> <code>SPRING2025</code> <?php esc_html_e('at checkout. Sale ends 6/25/2025.', 'simple-download-counter'); ?> 
 					<?php echo simple_download_counter_dismiss_notice_link(); ?>
 				</p>
 			</div>
@@ -112,7 +112,7 @@ function simple_download_counter_dismiss_notice_link() {
 
 function simple_download_counter_check_date_expired() {
 	
-	$expires = apply_filters('simple_download_counter_check_date_expired', '2024-12-21');
+	$expires = apply_filters('simple_download_counter_check_date_expired', '2025-06-25');
 	
 	return (new DateTime() > new DateTime($expires)) ? true : false;
 	

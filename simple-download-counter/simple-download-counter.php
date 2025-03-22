@@ -9,9 +9,9 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 5.0
-	Tested up to: 6.7
-	Stable tag: 2.1
-	Version:    2.1
+	Tested up to: 6.8
+	Stable tag: 2.2
+	Version:    2.2
 	Requires PHP: 5.6.20
 	Text Domain: simple-download-counter
 	Domain Path: /languages
@@ -32,7 +32,7 @@
 	You should have received a copy of the GNU General Public License
 	with this program. If not, visit: https://www.gnu.org/licenses/
 	
-	Copyright 2024 Monzilla Media. All rights reserved.
+	Copyright 2025 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();
@@ -105,9 +105,9 @@ if (!class_exists('Simple_Download_Counter')) {
 		
 		function constants() {
 			
-			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.1');
+			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.2');
 			if (!defined('DOWNLOAD_COUNTER_REQUIRE')) define('DOWNLOAD_COUNTER_REQUIRE', '5.0');
-			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.7');
+			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.8');
 			if (!defined('DOWNLOAD_COUNTER_AUTHOR'))  define('DOWNLOAD_COUNTER_AUTHOR',  'Jeff Starr');
 			if (!defined('DOWNLOAD_COUNTER_NAME'))    define('DOWNLOAD_COUNTER_NAME',    'Simple Download Counter');
 			if (!defined('DOWNLOAD_COUNTER_HOME'))    define('DOWNLOAD_COUNTER_HOME',    esc_url('https://perishablepress.com/simple-download-counter/'));
