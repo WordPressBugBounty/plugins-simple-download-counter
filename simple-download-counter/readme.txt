@@ -10,8 +10,8 @@ Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 2.2
-Version:    2.2
+Stable tag: 2.2.1
+Version:    2.2.1
 Requires PHP: 5.6.20
 Text Domain: simple-download-counter
 Domain Path: /languages
@@ -285,6 +285,10 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 
 If you like Simple Download Counter, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
+
+**2.2.1 (2025/04/16)**
+
+* Improves sanitization for `before` and `after` attributes for `[sdc_count]`
 
 **2.2 (2025/03/22)**
 

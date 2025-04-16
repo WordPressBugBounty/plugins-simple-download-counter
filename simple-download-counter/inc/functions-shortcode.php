@@ -320,6 +320,10 @@ function simple_download_counter_count($atts) {
 	
 	//
 	
+	$before = esc_html($before);
+	
+	$after = esc_html($after);
+	
 	$array = array('before' => $before, 'after' => $after);
 	
 	list($array, $before, $after, $download_count) = simple_download_counter_count_vars($id, $array);
