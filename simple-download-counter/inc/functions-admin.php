@@ -295,7 +295,7 @@ function simple_download_counter_meta_box_note() {
 	
 	echo '<div class="simple-download-counter-note-wrap">';
 	
-	echo esc_html__('Please use caution when specifying download URLs. While it is possible to define URLs that are outside of the WordPress directory, it is not recommended. ', 'simple-download-counter');
+	echo esc_html__('Please use caution when specifying download URLs. While it is possible to define URLs that are outside of the WordPress Media Library, it is not recommended. ', 'simple-download-counter');
 	echo esc_html__('Best practice for adding new download files:', 'simple-download-counter');
 	
 	echo '<ol>';

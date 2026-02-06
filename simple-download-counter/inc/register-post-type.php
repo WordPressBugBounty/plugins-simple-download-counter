@@ -5,6 +5,8 @@ if (!defined('ABSPATH')) exit;
 
 function simple_download_counter_post_type() {
 	
+	$capability = apply_filters('simple_download_counter_capability', 'manage_options');
+	
 	$labels = array(
 		
 		'name'                  => __('Downloads',                    'simple-download-counter'),
@@ -65,21 +67,21 @@ function simple_download_counter_post_type() {
 		
 		'capabilities'         => array(
 			
-			'edit_post'          => 'manage_options',
-			'read_post'          => 'manage_options',
-			'delete_post'        => 'manage_options',	
-			'edit_posts'         => 'manage_options',
-			'edit_others_posts'  => 'manage_options',
-			'delete_posts'       => 'manage_options',
-			'publish_posts'      => 'manage_options',
-			'read_private_posts' => 'manage_options',
+			'edit_post'          => $capability,
+			'read_post'          => $capability,
+			'delete_post'        => $capability,	
+			'edit_posts'         => $capability,
+			'edit_others_posts'  => $capability,
+			'delete_posts'       => $capability,
+			'publish_posts'      => $capability,
+			'read_private_posts' => $capability,
 			
-	   		 'read'                   => 'manage_options',
-	   		 'delete_private_posts'   => 'manage_options',
-	   		 'delete_published_posts' => 'manage_options',
-	   		 'delete_others_posts'    => 'manage_options',
-	   		 'edit_private_posts'     => 'manage_options',
-	   		 'edit_published_posts'   => 'manage_options',
+	   		 'read'                   => $capability,
+	   		 'delete_private_posts'   => $capability,
+	   		 'delete_published_posts' => $capability,
+	   		 'delete_others_posts'    => $capability,
+	   		 'edit_private_posts'     => $capability,
+	   		 'edit_published_posts'   => $capability,
 	   		 
 	   	),
 		
@@ -97,6 +99,8 @@ function simple_download_counter_post_type() {
 
 
 function simple_download_counter_custom_category() {
+	
+	$capability = apply_filters('simple_download_counter_capability', 'manage_options');
 	
 	$labels = array(
 		
@@ -136,10 +140,10 @@ function simple_download_counter_custom_category() {
 		
 		'capabilities'      => array(
 			
-			'manage_terms'  => 'manage_options',
-			'edit_terms'    => 'manage_options',
-			'delete_terms'  => 'manage_options',
-			'assign_terms'  => 'manage_options',
+			'manage_terms'  => $capability,
+			'edit_terms'    => $capability,
+			'delete_terms'  => $capability,
+			'assign_terms'  => $capability,
 		),
 		
 	);
@@ -150,6 +154,8 @@ function simple_download_counter_custom_category() {
 
 
 function simple_download_counter_custom_tag() {
+	
+	$capability = apply_filters('simple_download_counter_capability', 'manage_options');
 	
 	$labels = array(
 		
@@ -194,10 +200,10 @@ function simple_download_counter_custom_tag() {
 		
 		'capabilities'      => array(
 			
-			'manage_terms'  => 'manage_options',
-			'edit_terms'    => 'manage_options',
-			'delete_terms'  => 'manage_options',
-			'assign_terms'  => 'manage_options',
+			'manage_terms'  => $capability,
+			'edit_terms'    => $capability,
+			'delete_terms'  => $capability,
+			'assign_terms'  => $capability,
 		),
 		
 	);

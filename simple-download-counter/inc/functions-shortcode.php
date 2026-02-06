@@ -3,11 +3,187 @@
 if (!defined('ABSPATH')) exit;
 
 
-function simple_download_counter_meta($atts) {
+function simple_download_counter_cats($atts) {
 	
 	extract(shortcode_atts(array(
 		
 		'id'     => null, // required
+		
+		'links'  => 'true',
+		'format' => 'list', // list, div, span
+		
+	), $atts, 'sdc_cats'));
+	
+	if (empty($id) || !is_numeric($id)) {
+		
+		return __('Invalid Download ID', 'simple-download-counter');
+		
+	}
+	
+	$output = '';
+	
+	$array = array();
+	
+	$terms = get_the_terms((int) $id, 'sdc_download_category');
+	
+	foreach ($terms as $term) {
+		
+		if ($links === 'true') {
+			
+			$array[] = '<a href="'. esc_url(get_term_link((int) $term->term_id)) .'" title="'. esc_attr__('Visit category archive', 'simple-download-counter') .'">'. esc_html($term->name) .'</a>';
+			
+		} else {
+			
+			$array[] = $term->name;
+			
+		}
+		
+	}
+	
+	if ($format === 'list') {
+		
+		$output .= '<ul class="sdc-cats sdc-cats-'. $id .' sdc-cats-list">';
+		
+		foreach ($array as $link) {
+			
+			$output .= '<li>'. $link .'</li>';
+			
+		}
+		
+		$output .= '</ul>';
+		
+	} elseif ($format === 'div') {
+		
+		$output .= '<div class="sdc-cats sdc-cats-'. $id .' sdc-cats-div">';
+		
+		foreach ($array as $link) {
+			
+			$output .= $link .', ';
+			
+		}
+		
+		$output = trim($output, ', ');
+		
+		$output .= '</div>';
+		
+	} else {
+		
+		$output .= '<span class="sdc-cats sdc-cats-'. $id .' sdc-cats-span">';
+		
+		foreach ($array as $link) {
+			
+			$output .= $link .', ';
+			
+		}
+		
+		$output = trim($output, ', ');
+		
+		$output .= '</span>';
+		
+	}
+	
+	return $output;
+	
+}
+
+
+function simple_download_counter_menu($atts) {
+	
+	extract(shortcode_atts(array(
+		
+		'cat'    => '', // required
+		
+		'number' => 3,                // number of downloads
+		'extra'  => 'false',            // show select menu for additional downloads
+		'text'   => 'Download more...', // text for select option
+		
+	), $atts, 'sdc_menu'));
+	
+	if (empty($cat)) {
+		
+		return __('Invalid Download Category', 'simple-download-counter');
+		
+	}
+	
+	//
+	
+	$args = array(
+		
+		'post_type'   => 'sdc_download',
+		'post_status' => 'publish',
+		'tax_query'   => array(
+							array(
+								'taxonomy' => 'sdc_download_category',
+								'field'    => 'slug',
+								'terms'    => $cat,
+							),
+						),
+		'order'          => 'desc',
+		'orderby'		 => 'date',
+		'posts_per_page' => -1,
+		
+	);
+	
+	$sdc_query = new WP_query($args);
+	
+	$downloads = $sdc_query->posts;
+	
+	//
+	
+	if ((int) $number > 0) {
+			
+		$output = '<ul class="sdc-menu-list sdc-menu-list-'. $cat .'">';
+		
+		foreach (array_slice($downloads, 0, $number) as $item) {
+			
+			$url = simple_download_counter_download_url($item->ID);
+			
+			$hash = get_post_meta($item->ID, 'sdc_download_hash', true);
+			
+			if ($hash) $url = add_query_arg('key', $hash, $url);
+			
+			$output .= '<li><a href="'. esc_url($url) .'" title="'. esc_attr__('Download this file', 'simple-download-counter') .'">'. esc_html($item->post_title) .'</a></li>';
+			
+		}
+		
+		$output .= '</ul>';
+		
+	}
+	
+	//
+	
+	if ($extra == 'true') {
+		
+		$output .= '<select class="sdc-menu-select sdc-menu-select-'. $cat .'" onchange="if (this.value) window.location.href=this.value">';
+		
+		$output .= '<option disabled selected>'. $text .'</option>';
+		
+		foreach (array_slice($downloads, $number, 1000) as $item) {
+			
+			$url = simple_download_counter_download_url($item->ID);
+			
+			$hash = get_post_meta($item->ID, 'sdc_download_hash', true);
+			
+			if ($hash) $url = add_query_arg('key', $hash, $url);
+			
+			$output .= '<option value="'. esc_url($url) .'">'. esc_html($item->post_title) .'</option>';
+			
+		}
+		
+		$output .= '</select>';
+		
+	}
+	
+	return $output;
+	
+}
+
+
+function simple_download_counter_meta($atts) {
+	
+	extract(shortcode_atts(array(
+		
+		'id'      => null, // required
 		
 		'title'   => 'false',
 		'url'     => 'false',

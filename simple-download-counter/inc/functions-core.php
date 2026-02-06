@@ -233,6 +233,27 @@ function simple_download_counter_updated_option_flush() {
 	
 }
 
+function simple_download_counter_micro_api() {
+	
+	$options = simple_download_counter_options();
+	
+	$micro_api = (isset($options['micro_api']) && $options['micro_api']) ? true : false;
+	
+	if ($micro_api) {
+		
+		if (isset($_GET['sdc-download-api']) && !empty($_GET['sdc-download-api'])) {
+			
+			$id = sanitize_key($_GET['sdc-download-api']);
+			
+			$count = simple_download_counter_get_count($id);
+			
+			die($count);
+			
+		}
+		
+	}
+	
+}
 
 //
 

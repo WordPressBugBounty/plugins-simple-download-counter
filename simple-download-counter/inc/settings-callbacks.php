@@ -95,6 +95,12 @@ function simple_download_counter_callback_checkbox($args) {
 	$id      = isset($args['id'])      ? $args['id']      : '';
 	$label   = isset($args['label'])   ? $args['label']   : '';
 	
+	$label_micro_api  = esc_html__('Make all download counts publicly accessible via URL request', 'simple-download-counter');
+	$label_micro_api .= ' (<a target="_blank" rel="noopener noreferrer" href="https://perishablepress.com/micro-api-simple-download-counter/" title="'. esc_html__('learn more', 'simple-download-counter') .'">';
+	$label_micro_api .= esc_html__('learn more', 'simple-download-counter') .'</a>)';
+	
+	$label = ($id === 'micro_api') ? $label_micro_api : esc_html($label);
+	
 	$options = simple_download_counter_options();
 	
 	$value = isset($options[$id]) ? $options[$id] : '';
@@ -102,7 +108,7 @@ function simple_download_counter_callback_checkbox($args) {
 	$name = 'download_counter_options['. $id .']';
 	
 	echo '<input id="'. esc_attr($name) .'" name="'. esc_attr($name) .'" type="checkbox" '. checked($value, 1, false) .' value="1"> ';
-	echo '<label for="'. esc_attr($name) .'" class="inline-block">'. esc_html($label) .'</label>';
+	echo '<label for="'. esc_attr($name) .'" class="inline-block">'. $label .'</label>';
 	
 }
 

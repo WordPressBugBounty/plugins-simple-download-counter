@@ -22,6 +22,9 @@ function simple_download_counter_validate_settings($input) {
 	if (!isset($input['custom_fields'])) $input['custom_fields'] = null;
 	$input['custom_fields'] = ($input['custom_fields'] == 1 ? 1 : 0);
 	
+	if (!isset($input['micro_api'])) $input['micro_api'] = null;
+	$input['micro_api'] = ($input['micro_api'] == 1 ? 1 : 0);
+	
 	return $input;
 	
 }

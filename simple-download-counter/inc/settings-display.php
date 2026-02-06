@@ -5,6 +5,8 @@ if (!defined('ABSPATH')) exit;
 
 function simple_download_counter_menu_pages() {
 	
+	$capability_settings = apply_filters('simple_download_counter_capability_settings', 'manage_options');
+	
 	// add_submenu_page($parent_slug, $page_title, $menu_title, $capability, $menu_slug, $callback, $position)
 	
 	add_submenu_page(
@@ -12,7 +14,7 @@ function simple_download_counter_menu_pages() {
 		'edit.php?post_type=sdc_download', 
 		esc_html__('Settings', 'simple-download-counter'), 
 		esc_html__('Settings', 'simple-download-counter'), 
-		'manage_options', 'download-counter-settings', 
+		$capability_settings, 'download-counter-settings', 
 		'simple_download_counter_display_settings'
 		
 	);

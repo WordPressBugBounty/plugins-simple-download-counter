@@ -9,16 +9,14 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 5.0
-	Tested up to: 6.8
-	Stable tag: 2.2.1
-	Version:    2.2.1
+	Tested up to: 6.9
+	Stable tag: 2.3
+	Version:    2.3
 	Requires PHP: 5.6.20
 	Text Domain: simple-download-counter
 	Domain Path: /languages
 	License: GPL v2 or later
-*/
-
-/*
+	
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
 	as published by the Free Software Foundation; either version 
@@ -32,7 +30,7 @@
 	You should have received a copy of the GNU General Public License
 	with this program. If not, visit: https://www.gnu.org/licenses/
 	
-	Copyright 2025 Monzilla Media. All rights reserved.
+	Copyright 2022-2026 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();
@@ -53,6 +51,8 @@ if (!class_exists('Simple_Download_Counter')) {
 			add_action('init', 'simple_download_counter_updated_option_flush');
 			
 			add_action('admin_init',          array($this, 'check_version'));
+			add_action('admin_init',          array($this, 'check_multisite'));
+			add_action('plugins_loaded',      array($this, 'load_i18n'));
 			add_filter('plugin_action_links', array($this, 'action_links'), 10, 2);
 			add_filter('plugin_row_meta',     array($this, 'plugin_links'), 10, 2);
 			add_filter('admin_footer_text',   array($this, 'footer_text'),  10, 1);
@@ -91,6 +91,7 @@ if (!class_exists('Simple_Download_Counter')) {
 			add_filter('default_hidden_meta_boxes', 'simple_download_counter_hide_meta_box',   10, 2);
 			add_action('save_post',                 'simple_download_counter_meta_box_process');
 			
+			add_action('parse_request', 'simple_download_counter_micro_api');
 			add_action('parse_request', 'simple_download_counter_download_handler');
 			add_action('init',          'simple_download_counter_add_rewrite', 0);
 			
@@ -98,16 +99,17 @@ if (!class_exists('Simple_Download_Counter')) {
 			add_shortcode('sdc_downloads_published', 'simple_download_counter_downloads_published');
 			add_shortcode('sdc_count',               'simple_download_counter_count');
 			add_shortcode('sdc_count_total',         'simple_download_counter_count_total');
-			
 			add_shortcode('sdc_meta',                'simple_download_counter_meta');
+			add_shortcode('sdc_cats',                'simple_download_counter_cats');
+			add_shortcode('sdc_menu',                'simple_download_counter_menu');
 			
 		} 
 		
 		function constants() {
 			
-			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.2.1');
+			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.3');
 			if (!defined('DOWNLOAD_COUNTER_REQUIRE')) define('DOWNLOAD_COUNTER_REQUIRE', '5.0');
-			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.8');
+			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '6.9');
 			if (!defined('DOWNLOAD_COUNTER_AUTHOR'))  define('DOWNLOAD_COUNTER_AUTHOR',  'Jeff Starr');
 			if (!defined('DOWNLOAD_COUNTER_NAME'))    define('DOWNLOAD_COUNTER_NAME',    'Simple Download Counter');
 			if (!defined('DOWNLOAD_COUNTER_HOME'))    define('DOWNLOAD_COUNTER_HOME',    esc_url('https://perishablepress.com/simple-download-counter/'));
@@ -144,6 +146,7 @@ if (!class_exists('Simple_Download_Counter')) {
 				
 				'download_key'  => 'sdc_download',
 				'custom_fields' => false,
+				'micro_api'     => false,
 				
 			);
 			
@@ -219,6 +222,62 @@ if (!class_exists('Simple_Download_Counter')) {
 						wp_die($msg);
 						
 					}
+					
+				}
+				
+			}
+			
+		}
+		
+		function check_multisite() {
+			
+			if (is_multisite()) {
+				
+				if (is_plugin_active(DOWNLOAD_COUNTER_FILE)) {
+					
+					deactivate_plugins(DOWNLOAD_COUNTER_FILE);
+					
+					$msg = '<p><strong>'. DOWNLOAD_COUNTER_NAME .'</strong> '. esc_html__('is incompatible with WordPress Multisite and has been deactivated.', 'simple-download-counter') .'</p>';
+					
+					$msg .= '<p><a href="'. admin_url() .'plugins.php">'. esc_html__('Return to Admin Area', 'simple-download-counter') .'</a></p>';
+					
+					wp_die($msg);
+					
+				}
+				
+			}
+			
+		}
+		
+		function load_i18n() {
+			
+			$domain = 'simple-download-counter';
+			
+			$locale = apply_filters('download_counter_locale', get_locale(), $domain);
+			
+			$dir    = trailingslashit(WP_LANG_DIR);
+			
+			$file   = $domain .'-'. $locale .'.mo';
+			
+			$path_1 = $dir . $file;
+			
+			$path_2 = $dir . $domain .'/'. $file;
+			
+			$path_3 = $dir .'plugins/'. $file;
+			
+			$path_4 = $dir .'plugins/'. $domain .'/'. $file;
+			
+			$paths = array($path_1, $path_2, $path_3, $path_4);
+			
+			foreach ($paths as $path) {
+				
+				if ($loaded = load_textdomain($domain, $path)) {
+					
+					return $loaded;
+					
+				} else {
+					
+					return load_plugin_textdomain($domain, false, dirname(DOWNLOAD_COUNTER_FILE) .'/languages/');
 					
 				}
 				
