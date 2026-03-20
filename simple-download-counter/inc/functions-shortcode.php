@@ -132,7 +132,7 @@ function simple_download_counter_menu($atts) {
 	
 	if ((int) $number > 0) {
 			
-		$output = '<ul class="sdc-menu-list sdc-menu-list-'. $cat .'">';
+		$output = '<ul class="sdc-menu-list sdc-menu-list-'. esc_attr($cat) .'">';
 		
 		foreach (array_slice($downloads, 0, $number) as $item) {
 			
@@ -154,9 +154,9 @@ function simple_download_counter_menu($atts) {
 	
 	if ($extra == 'true') {
 		
-		$output .= '<select class="sdc-menu-select sdc-menu-select-'. $cat .'" onchange="if (this.value) window.location.href=this.value">';
+		$output .= '<select class="sdc-menu-select sdc-menu-select-'. esc_attr($cat) .'" onchange="if (this.value) window.location.href=this.value">';
 		
-		$output .= '<option disabled selected>'. $text .'</option>';
+		$output .= '<option disabled selected>'. esc_html($text) .'</option>';
 		
 		foreach (array_slice($downloads, $number, 1000) as $item) {
 			

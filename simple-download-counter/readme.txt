@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 5.0
-Tested up to: 6.9
-Stable tag: 2.3
-Version:    2.3
+Tested up to: 7.0
+Stable tag: 2.3.1
+Version:    2.3.1
 Requires PHP: 5.6.20
 Text Domain: simple-download-counter
 Domain Path: /languages
@@ -357,17 +357,10 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Simple Download Counter, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**2.3 (2026/01/30)**
+**2.3.1 (2026/03/20)**
 
-* Adds [Micro API](https://perishablepress.com/micro-api-simple-download-counter/) to get download counts via URL
-* Adds shortcode to display download categories
-* Adds shortcode to display multiple download links ([Thanks](https://wordpress.org/support/topic/output-list-of-links-from-category-of-downloads/#post-17560653) [@feisar](https://wordpress.org/support/users/feisar/))
-* Updates plugin settings page
-* Improves Edit Download screen
-* Improves readme.txt documentation
-* Generates new language template
-* Tests on PHP 8.4 and 8.5
-* Tests on WordPress 6.9
+* Improves sanitization of shortcode output
+* Tests on WordPress 6.9 + 7.0
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/simple-download-counter.txt](https://plugin-planet.com/wp/changelog/simple-download-counter.txt)
