@@ -10,8 +10,8 @@ Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 5.0
 Tested up to: 7.0
-Stable tag: 2.3.1
-Version:    2.3.1
+Stable tag: 2.3.2
+Version:    2.3.2
 Requires PHP: 5.6.20
 Text Domain: simple-download-counter
 Domain Path: /languages
@@ -48,7 +48,7 @@ Visit the plugin settings to add a download file. Then use the shortcode to disp
 * Clean code tightly integrated with WordPress
 * No Apache/.htaccess required
 
-Check out the screenshots below to get a better idea of the plugin settings and more.
+Check out the [screenshots](https://wordpress.org/plugins/simple-download-counter/#screenshots) below to get a better idea of the plugin settings and more.
 
 
 **How is this better?**
@@ -96,6 +96,7 @@ And/or purchase one of my premium WordPress plugins:
 * [Banhammer Pro](https://plugin-planet.com/banhammer-pro/) - Monitor traffic and ban the bad guys
 * [GA Google Analytics Pro](https://plugin-planet.com/ga-google-analytics-pro/) - Connect WordPress to Google Analytics
 * [Head Meta Pro](https://plugin-planet.com/head-meta-pro/) - Ultimate Meta Tags for WordPress
+* [REST Pro Tools](https://plugin-planet.com/rest-pro-tools/) - Awesome tools for managing the WP REST API
 * [Simple Ajax Chat Pro](https://plugin-planet.com/simple-ajax-chat-pro/) - Unlimited chat rooms
 * [USP Pro](https://plugin-planet.com/usp-pro/) - Unlimited front-end forms
 
@@ -357,10 +358,12 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Simple Download Counter, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**2.3.1 (2026/03/20)**
+**2.3.2 (2026/04/19)**
 
-* Improves sanitization of shortcode output
-* Tests on WordPress 6.9 + 7.0
+* Fixes bug with reset options
+* Updates plugin settings page
+* Improves readme.txt documentation
+* Tests on WordPress 7.0
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/simple-download-counter.txt](https://plugin-planet.com/wp/changelog/simple-download-counter.txt)

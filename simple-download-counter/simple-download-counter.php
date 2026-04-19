@@ -10,8 +10,8 @@
 	Contributors: specialk
 	Requires at least: 5.0
 	Tested up to: 7.0
-	Stable tag: 2.3.1
-	Version:    2.3.1
+	Stable tag: 2.3.2
+	Version:    2.3.2
 	Requires PHP: 5.6.20
 	Text Domain: simple-download-counter
 	Domain Path: /languages
@@ -107,7 +107,7 @@ if (!class_exists('Simple_Download_Counter')) {
 		
 		function constants() {
 			
-			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.3.1');
+			if (!defined('DOWNLOAD_COUNTER_VERSION')) define('DOWNLOAD_COUNTER_VERSION', '2.3.2');
 			if (!defined('DOWNLOAD_COUNTER_REQUIRE')) define('DOWNLOAD_COUNTER_REQUIRE', '5.0');
 			if (!defined('DOWNLOAD_COUNTER_TESTED'))  define('DOWNLOAD_COUNTER_TESTED',  '7.0');
 			if (!defined('DOWNLOAD_COUNTER_AUTHOR'))  define('DOWNLOAD_COUNTER_AUTHOR',  'Jeff Starr');
@@ -171,7 +171,7 @@ if (!class_exists('Simple_Download_Counter')) {
 			if ($file === DOWNLOAD_COUNTER_FILE) {
 				
 				$rate_href  = 'https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post';
-				$rate_title = esc_attr__('Click here to rate and review this plugin on WordPress.org', 'simple-download-counter');
+				$rate_title = esc_attr__('Click here to rate and review this plugin at WordPress.org', 'simple-download-counter');
 				$rate_text  = esc_html__('Rate this plugin', 'simple-download-counter') .'&nbsp;&raquo;';
 				
 				$links[] = '<a target="_blank" rel="noopener noreferrer" href="'. $rate_href .'" title="'. $rate_title .'">'. $rate_text .'</a>';
@@ -215,9 +215,9 @@ if (!class_exists('Simple_Download_Counter')) {
 						deactivate_plugins(DOWNLOAD_COUNTER_FILE);
 						
 						$msg  = '<strong>'. DOWNLOAD_COUNTER_NAME .'</strong> '. esc_html__('requires WordPress ', 'simple-download-counter') . DOWNLOAD_COUNTER_REQUIRE;
-						$msg .= esc_html__(' or higher, and has been deactivated! ', 'simple-download-counter');
-						$msg .= esc_html__('Please return to the', 'simple-download-counter') .' <a href="'. admin_url() .'">';
-						$msg .= esc_html__('WP Admin Area', 'simple-download-counter') .'</a> '. esc_html__('to upgrade WordPress and try again.', 'simple-download-counter');
+						$msg .= esc_html__(' or higher, and has been deactivated. ', 'simple-download-counter');
+						$msg .= esc_html__('Please return to the', 'simple-download-counter') .' <a href="'. admin_url('plugins.php') .'">';
+						$msg .= esc_html__('WordPress Admin Area', 'simple-download-counter') .'</a> '. esc_html__('to upgrade WordPress and try again.', 'simple-download-counter');
 						
 						wp_die($msg);
 						
