@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 5.0
-Tested up to: 7.0
-Stable tag: 2.3.2
-Version:    2.3.2
+Tested up to: 7.1
+Stable tag: 2.3.3
+Version:    2.3.3
 Requires PHP: 5.6.20
 Text Domain: simple-download-counter
 Domain Path: /languages
@@ -357,6 +357,11 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 
 If you like Simple Download Counter, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-download-counter/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
+
+**2.3.3 (2026/08/09)**
+
+* Updates plugin settings page
+* Tests on WordPress 7.1
 
 **2.3.2 (2026/04/19)**
 
